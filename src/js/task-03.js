@@ -12,3 +12,13 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+images.forEach(image => {
+  const list = document.querySelector(".gallery");
+  const picture = `<li class="third-task"><img src=${image.url} alt=${image.alt} width="360" ></li>`
+  list.insertAdjacentHTML("beforeend", picture);
+  list.style.display = "flex";
+  list.style.justifyContent = "space-between";
+  list.style.alignItems = "center";
+  list.style.listStyle = "none";
+})
